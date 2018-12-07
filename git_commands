@@ -1,0 +1,90 @@
+git clone https://abhilash94@bitbucket.org/abhilash94/sample_repo.git  ----------------- To clone a git repo in local system
+
+2. git remote add origin https://abhilash94@bitbucket.org/abhilash94/sample_repo.git  ------ to add/configure a remote repo with name (origin) to local system
+
+git remote remove sample_repo  ------ To remove remote repo
+
+3. git remote -v  -------------- To list all remote repos configured
+
+git push  ------------------- To push a project from local system to remote repository
+
+git pull  ------------------- To pull a project from remote repository to local system
+
+*Initial Push Command* git push --set-upstream origin master  ------------ To push a project to master branch of remote repo (origin) while dynamically created the master branch in remote repo
+
+git status  ----------------- To list all folders/files tracked/untracted/modified in local system
+
+git add -A  ----------------- To add folders/files to staging to get them ready for commiting
+
+git commit -m "new files added"  ------------- To commit staged/modified files
+
+git push sample_repo  ------------------------ To push the commited folders/files (project) to remote repo (sample_repo) from local system
+
+git pull sample_repo  ------------------------ To pull the folders/files (project) from remote repo (sample_repo) to local system
+
+1. git init  ---------------------------- To track local folders/files using GIT
+
+git config --list  ------------------ To list all config parameters
+
+git config --global user.name "Abhilash Pedamallu"  ------------ To set username as config parameter
+
+git config --global user.email "abhilash.pedamallu@astrazeneca.com"  --------- To set user email as config parameter
+
+git --version  ------------- To check out GIT version installed (IF git is installed in first place)
+
+git branch feature  --------------- To create a new branch (feature)
+
+git branch  ----------------------- To list all branches in local system
+
+git checkout feature  ------------- To switch to a different branch (feature from master)
+
+git push -u origin feature  ---------- To push folders/files to feature branch of remote repo (origin) from feature branch of local system (-u to associate btw branches)
+
+git branch -a  --------------------- To list all branches in local system as well as remote repo
+
+git branch --merged  --------------- To check what branches are merged
+
+git merge feature  ----------------- To create pull request/merge feature branch to master branch
+
+git push origin master  ------------ To push master branch of remote repo (origin) to the remote repo (origin) in bitbucket after merging branches
+
+git branch -d feature  ------------- To delete a branch (feature)
+
+git branch -D feature  ------------- To delete a branch (feature)
+
+git pull origin master  ------------ To pull master branch of remote repo (origin) after merging is complete
+
+git clone -b mybranch --single-branch git://sub.domain.com/repo.git -- pull specific branch to local otherthan master
+
+git push origin branch1:branch2 -- Push commits to another branch
+
+git push -f origin Develop:feature --- force push to another branch
+
+git remote rm origin -- remove 
+
+git rm -r --cached . - remove cached files and folders
+
+rm -rf .git -- dlink .git repo from local
+
+git rm -f sql/ACTY/pull_feature_branch_file.txt -- forced to remove specific cached files.
+
+git checkout -b vamsy-feature develop -- create new branch local from develop
+ 
+git rebase -- rebase will identify the latest changes from parent branch
+
+git push -u origin vamsy-feature -- creates temp branch in remote
+
+git fetch origin -- get all the latest contnet from all branches for repository
+
+git reset --hard origin/develop --- get the latest from remote develop
+
+git cherry-pick 99aa1ac ---- deploy specific commits to another branch by specify the commit numbers
+
+Vamsy
+git status
+git add -A
+git status
+git commit -m "add comment"
+git status
+git push
+git pull
