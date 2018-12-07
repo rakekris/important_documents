@@ -1,0 +1,29 @@
+vagrant box add pyspark-pipenv-3.6.5_2.3.1 C:\Users\kzsg921\Rakesh\target_state\software\pyspark-pipenv-3.6.5_2.3.1.box
+to add the box in vagrant
+
+vagrant package for getting box out of the virtual box image
+
+https://docs.pytest.org/en/latest/fixture.html
+
+calculating md5 of file using shell in python
+command = "md5sum "+filename+"  | awk '{ print $1 }'"
+               process = subprocess.Popen(command,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+               calculated_checksum = process.communicate()[0]
+
+
+onlyfiles = [f for f in listdir(self.file_path) if isfile(join(self.file_path, f))]
+               
+ar file is compressed using a gzip compressor, use this command to uncompress it : tar xvzf file.tar.gz          
+
+dynamic port forwarding
+
+apache carbon data
+
+checksum in chunks
+
+def md5(fname):
+    hash_md5 = hashlib.md5()
+    with open(fname, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()
