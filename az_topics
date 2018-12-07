@@ -27,3 +27,29 @@ def md5(fname):
         for chunk in iter(lambda: f.read(4096), b""):
             hash_md5.update(chunk)
     return hash_md5.hexdigest()
+    
+    
+    
+    
+adding zeppeling to the existing ec2 box    
+wget -qO- http://apache.mirrors.tds.net/zeppelin/zeppelin-0.8.0/zeppelin-0.8.0-bin-all.tgz | tar xvz
+
+wget -qO- http://apache.mirrors.ionfish.org/spark/spark-2.3.1/spark-2.3.1-bin-hadoop2.7.tgz | tar xvz
+
+$SPARK_HOME/jars
+wget http://central.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar
+wget http://central.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar
+
+echo "SPARK_HOME=/home/vagrant/spark-2.3.1-bin-hadoop2.7" >> ~/.bash_profile
+source ~/.bash_profile
+
+zeppeling http://localhost:8888/#/notebook/2DWUKKDNM
+
+spark.hadoop.fs.s3a.access.key 
+spark.hadoop.fs.s3a.secret.key
+spark.sql.warehouse.dir /home/vagrant/hive/
+spark.sql.catalogImplementation hive
+spark.sql.hive.convertMetastoreParquet = false
+
+
+./zeppelin-0.8.0-bin-all/bin/zeppelin-daemon.sh restart
